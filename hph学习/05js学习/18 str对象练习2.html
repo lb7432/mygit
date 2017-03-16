@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  //取出一个地址中的文件名和后缀
+  //比如：c:/hhh/ffff/jjj/hello.html
+  //这里要用到.lastIndexOf()从后往前检索字符串！
+  var add = "c:/hhh/ffff/jjj/hello.html";
+  add1 = add.lastIndexOf(".");//先找到.的位置，
+  window.alert("后缀是" + add.substr(add1 + 1));
+  add2 = add.lastIndexOf("/");//再找到/的位置，最后两个下标之间！
+  window.alert("文件名是" + add.substring(add2 + 1,add1));
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

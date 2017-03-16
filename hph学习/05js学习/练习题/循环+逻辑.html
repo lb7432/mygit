@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  //写一个程序输出1~100，中途如果遇到3的倍数就用“三”代替，遇到5
+  //的倍数就用“五”代替，遇到3和5的倍数就用“三五”代替！
+  var z = 0;
+  for (i = 1; i <= 100; i++)
+  {
+	  z++;
+	  if (i % 3 == 0 && i % 5 == 0)
+	  {
+		  i = "三五";
+	  }else
+			{
+				if (i % 3 == 0)
+				{
+					i = "三";
+				}else
+					{
+						if (i % 5 ==0)
+						{
+							i = "五";
+						}
+					}
+			}
+	  document.write(i + "&nbsp");
+	  if (typeof(i)!="number")
+		{
+			i = z;
+		}
+  }
+  //var x = 1;
+ // document.write(typeof(x));
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

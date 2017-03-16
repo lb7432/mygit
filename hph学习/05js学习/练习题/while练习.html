@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  //假设某人有100000现金。没经过一次路口需缴费，规则：若他现金大于50000是需交5%，
+  //若小于等于50000时每次叫5000，问能过多少路口？
+  var now_rmb = 100000;
+  var i = 0;
+  var j = 0;
+  while (now_rmb > 50000)
+  {
+	  now_rmb -= now_rmb * 0.05;
+	  i++;
+  }
+  window.alert(now_rmb);
+  while (now_rmb > 5000)
+  {
+	  now_rmb = now_rmb - 5000;
+	  j++;
+  }
+  window.alert(now_rmb);
+  window.alert("总共路过" +(i + j)+"个路口");
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

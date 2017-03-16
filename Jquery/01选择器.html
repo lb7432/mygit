@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+		$("#box").css({"width":"500px","margin":"0 auto"});
+		$("p").css({"text-align":"center"});
+		$(".tb").css({"color":"red","font-size":"30px","font-family":"微软雅黑"});
+		$("#box>p").css({"color":"red"});/*选择的是box儿子辈标签*/
+		$("#box div p").css({"color":"purple"});/*box下所有div的所有p*/
+		$(".tb+p").css({"color":"blue"});/*紧邻在.tb后的一个p标签*/
+		$(".sb~p").css({"color":"black"});/*.sb 后面的所有同级p标签*/
+  })
+  </script>
+  </head>
+ <body>
+ <div id="box">
+	<p>新建文件夹...</p>
+	<p class="tb">新建文件夹...</p>
+	<p>新建文件夹...</p>
+	<p>新建文件夹...</p>
+	<p>新建文件夹...</p>
+ <div>
+	<p>新建文件夹...</p>
+	<p>新建文件夹...</p>
+	<p>新建文件夹...</p>
+ </div>
+ <div id="dow">
+	<p>我的顶顶顶顶顶顶顶顶</p>
+	<p class="sb">我的顶顶顶顶顶顶顶顶</p>
+	<p>我的顶顶顶顶顶顶顶顶</p>
+	<p>我的顶顶顶顶顶顶顶顶</p>
+ </div>
+ <div>
+	<p>分哈哈哈哈哈哈</p>
+	<p>分哈哈哈哈哈哈</p>
+	<p>分哈哈哈哈哈哈</p>
+ </div>
+ </div>
+ </body>
+</html>

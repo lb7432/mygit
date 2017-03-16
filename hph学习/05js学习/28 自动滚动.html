@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <style type="text/css">
+  *{
+    margin:0px;
+	/*padding:0px;*/
+  }
+  #div_all{
+	width:350px;
+	height:200px;
+	margin:20px 0 0 30px;
+	overflow:hidden;
+	background-color:pink;
+	font-weight:bold;
+  }
+  </style>
+ </head>
+ <body>
+	<div id="div_all" onmouseover="stopGun()" onmouseout="startGun()">
+		<div id="div1">
+		<ul id="good">
+			<li>汉皇重色思倾国，御宇多年求不得。</li>
+			<li>杨家有女初长成，养在深闺人未识。</li>
+			<li>天生丽质难自弃，一朝选在君王侧。</li>
+			<li>回眸一笑百媚生，六宫粉黛无颜色。</li>
+			<li>春寒赐浴华清池，温泉水滑洗凝脂。</li>
+			<li>侍儿扶起娇无力，始是新承恩泽时。</li>
+			<li>云鬓花颜金步摇，芙蓉帐暖度春宵。</li>
+			<li>春宵苦短日高起，从此君王不早朝。</li>
+			<li>承欢侍宴无闲暇，春从春游夜专夜。</li>
+			<li>春寒赐浴华清池，温泉水滑洗凝脂。</li>
+			<li>侍儿扶起娇无力，始是新承恩泽时。</li>
+			<li>云鬓花颜金步摇，芙蓉帐暖度春宵。</li>
+			<li>春宵苦短日高起，从此君王不早朝。</li>
+			<li>承欢侍宴无闲暇，春从春游夜专夜。</li>
+		</ul>
+		</div>
+		<div id="div2">
+		<ul id="good">
+			<li>汉皇重色思倾国，御宇多年求不得。</li>
+			<li>杨家有女初长成，养在深闺人未识。</li>
+			<li>天生丽质难自弃，一朝选在君王侧。</li>
+			<li>回眸一笑百媚生，六宫粉黛无颜色。</li>
+			<li>春寒赐浴华清池，温泉水滑洗凝脂。</li>
+			<li>侍儿扶起娇无力，始是新承恩泽时。</li>
+			<li>云鬓花颜金步摇，芙蓉帐暖度春宵。</li>
+			<li>春宵苦短日高起，从此君王不早朝。</li>
+			<li>承欢侍宴无闲暇，春从春游夜专夜。</li>
+			<li>春寒赐浴华清池，温泉水滑洗凝脂。</li>
+			<li>侍儿扶起娇无力，始是新承恩泽时。</li>
+			<li>云鬓花颜金步摇，芙蓉帐暖度春宵。</li>
+			<li>春宵苦短日高起，从此君王不早朝。</li>
+			<li>承欢侍宴无闲暇，春从春游夜专夜。</li>
+		</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	//先获取到div1对象的高度【clientHeight】
+	var div_1 = document.getElementById("div1");
+	//定时器
+	var timer = window.setInterval("gundong()",100);
+	function gundong()
+	{
+		var world = document.getElementById("div_all");
+		world.scrollTop += 2;
+		//连续滚动
+		if (world.scrollTop >= div_1.clientHeight)
+		{
+			world.scrollTop = 0;
+		}
+	}
+	function stopGun()
+	{
+		window.clearInterval(timer);
+	}
+	function startGun()
+	{
+		window.clearInterval(timer);
+		timer = window.setInterval("gundong()",100);
+	}
+	</script>
+ </body>
+</html>

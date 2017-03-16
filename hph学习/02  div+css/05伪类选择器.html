@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>伪类选择器</title>
+  <style type="text/css">
+  /*超链接默认样式格式*/
+  a:link{
+	font-size:30px;
+	color:black;
+	line-height:50px;
+	text-decoration:none;
+  }
+  /*当鼠标移动到超链接时的样式*/
+  a:hover{
+	text-decoration:underline;
+  }
+  /*点击之后显示的样式*/
+  a:visited{
+	color:red;
+  }
+  /*点住不放的样式*/
+  a:active{
+	color:blue;
+  }
+  a:link.tb{
+	color:pink;
+  }
+  </style>
+ </head>
+ <body>
+ <a href="http://www.baidu.com">百度</a><br>
+ <a href="http://www.qq.com">腾讯</a><br>
+ <a href="http://www.163.com">网易</a><br>
+ <a class="tb"href="http://www.ifeng.com">凤凰</a><br>
+ </body>
+</html>

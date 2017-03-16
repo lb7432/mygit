@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>for循环练习2</title>
+  <script type="text/javascript">
+	var x = window.prompt("请输入一个数字");
+	x = parseInt(x);
+	if(x >=1 && x<= 12)
+	{
+		for(i = 1; i <= x; i++)
+		{
+		document.write("<img src='"+ i +".png'>");
+		}
+	}else
+		{
+			for(y = 1; y <= 12 ; y++)
+			{
+			document.write("<img src='"+ y +".png'>");
+			}
+
+			if(x > 12)
+			{
+				j = x - 12;
+				for(z=1;z <= j; z++ )
+				{
+					document.write("<img src='"+ z +".png'>");
+				}
+			}else
+				{
+				window.alert("请输入一个大于0的数");
+				}
+		}
+
+	</script>
+ </head>
+ <body>
+  
+ </body>
+</html>

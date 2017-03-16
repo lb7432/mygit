@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+ </head>
+ <body>
+ <canvas id="huabu" width="400px" height="400px"style="border:1px solid black">
+ <script type="text/javascript">
+  var my_canvas = document.getElementById("huabu");
+  var my_huabi = my_canvas.getContext("2d");
+  my_huabi.strokeStyle = "black";
+  //乌龟脑袋
+  my_huabi.arc(200,50,10,0,2*Math.PI);
+  my_huabi.stroke();
+  //乌龟壳
+  my_huabi.fillStyle = "red";
+  my_huabi.arc(350,210,212.13,0.6*Math.PI,1.4*Math.PI);
+  my_huabi.fill();
+  </script>
+ </body>
+</html>

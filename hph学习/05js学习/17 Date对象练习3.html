@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var my_date = new Date();
+  var hours = my_date.getHours();
+  var min = my_date.getMinutes();
+  var a = hours * 100 + min;
+  //window.alert(a);
+  if (a >= 600 && a <= 900)
+  {
+	  window.alert("早上好");
+  }else
+		{
+			if (a >= 901 && a <= 1130)
+			{
+				window.alert("上午好");
+			}else
+				{
+					if (a >= 1131 && a <= 1430)
+					{
+						window.alert("中午好");
+					}else
+						{
+							if (a >= 1431 && a <= 1730)
+							{
+								window.alert("下午好");
+							}else
+								{
+									if (a >= 1731 && a <= 1840)
+									{
+										window.alert("傍晚好");
+									}else
+										{
+											if (a >= 1841 && a <= 2359)
+											{
+												window.alert("晚上好");
+											}else
+												{
+													window.alert("凌晨好");
+												}
+										}
+								}
+						}
+				}
+		}
+</script>
+  </head>
+ <body>
+ </body>
+</html>

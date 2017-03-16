@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  	#tu{
+  			position: absolute;
+  			top: 40px;
+  	}
+  </style>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  	$(function(){
+  		$("#put").click(function(){
+//			animate(要达到的样式属性的集合 ,  规定的时间,  动画效果 )
+  			$("#tu").animate({'left':'600px'},2000,function(){
+  				alert("到站了.........");
+  			});
+  		})
+  		
+  	})
+  </script>
+  </head>
+ <body>
+	<input type="button"value="点我呀" id="put"/><br />
+	<img src="gou.gif" style="width: 150px;left: 0px;"id="tu"/>
+ </body>
+</html>

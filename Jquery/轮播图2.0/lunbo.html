@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  *{
+  	margin: 0;
+  	padding: 0;
+  }
+  	#box{
+  		width: 1200px;
+  		height: 535px;
+  		border: 2px solid darkblue;
+  		margin: 30px auto;
+  		position: relative;
+  	}
+  	img{
+  		position: absolute;
+  		display: none;
+  	}
+  	#ull{
+  		position: absolute;
+  		left: 542px;
+  		bottom: 23px;
+  	}
+  	#ull li{
+  		list-style: none;
+  		float: left;
+  		width: 12px;
+  		height: 12px;
+  		background: black;
+  		margin-right: 10px;
+  		border-radius: 50%;
+  	}
+  </style>
+  <script type="text/javascript">
+  window.onload = function(){
+//	定时器调用的函数,必须写在外面才能暂停和重启
+  	  function a(){
+					for (var z = 0;z<tu.length; z++) {
+  					lii[z].style.background = "black";
+  					tu[z].style.display = "none";
+  					}
+					lii[k].style.background = "darkred";
+					tu[k].style.display = "block";
+					k++;
+					if (k==5) {
+					k = 0;
+					}
+	}
+//	  获取对象
+  		var tu = document.getElementsByTagName('img');
+  		var lii = document.getElementsByTagName('li');
+  		var ull = document.getElementById('ul');
+  		var k = 0;
+  		var timer = 0;
+  		var j = 0;
+//		给每个li加上鼠标事件
+  		for (var i= 0;i<lii.length; i++) {
+//			给每个li加上序号
+  			lii[i].xuhao = i;
+  			lii[i].onmouseover = function(){
+				clearInterval(timer);
+//				先把其它的style恢复默认
+  				for (j = 0;j<tu.length; j++) {
+  					lii[j].style.background = "black";
+  					tu[j].style.display = "none";
+  				}
+//				再改变现在触发的对象style
+  				lii[this.xuhao].style.background = "darkred";
+  				tu[this.xuhao].style.display = "block";
+//				将鼠标停留的li序号赋值给k,以便定时器从此处开始
+  				k = this.xuhao;
+  			}
+//			当鼠标移开li后重启定时器
+			lii[i].onmouseout =function(){
+				timer = setInterval(a,1000);
+			}
+  		}
+//		定时器
+				timer = setInterval(a,1000);
+  }
+  </script>
+  </head>
+ <body>
+ 	<div id="box">
+ 		<img src="1.jpg"style="display: block;"/>
+ 		<img src="2.jpg"/>
+ 		<img src="3.jpg"/>
+ 		<img src="4.jpg"/>
+ 		<img src="5.jpg"/>
+ 		<ul id="ull">
+ 			<li style="background: darkred;"></li>
+ 			<li></li>
+ 			<li></li>
+ 			<li></li>
+ 			<li></li>
+ 		</ul>
+ 	</div>
+ </body>
+</html>

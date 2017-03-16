@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <style type="text/css">
+  #div1{
+	width:200px;
+	height:200px;
+	border:2px solid red;
+	margin:0 auto;
+	/*如果3D效果，需在父元素上加perspective属性，*/
+	perspective:200px;
+  }
+  img{
+	/*定义旋转轴*/
+	transform-origin:left;
+	transition:all 3s;
+  }
+  img:hover{
+	transform:rotateY(45deg);
+  }
+  </style>
+ </head>
+ <body>
+ <div id="div1">
+	<img src="tou.jpg">
+ </div>
+ </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  //定义一个数组，7个值，求数组中大于平均值的个数和小于平均值的个数！
+  var x = [14,56,55,49,98,12,34];
+  var res = 0;
+  var z = 0;
+  var a = 0;
+  for (i = 0; i < 7; i++)
+  {
+	  res += x[i];
+  }
+  var average = res / 7;
+  for (j = 0; j < 7; j++)
+  {
+	  if (x[j] > average)
+	  {
+		  z++;
+	  }
+  }
+  for (k = 0; k < 7; k++)
+  {
+	  if (x[k] < average)
+	  {
+		  a++;
+	  }
+  }
+  window.alert(average);
+  window.alert("大于平均数的共" + z + "个");
+  window.alert("小于平均数的共" + a + "个");
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

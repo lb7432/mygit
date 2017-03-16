@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>逸岛网</title>
+  <style type="text/css">
+  *{
+	margin:0px;
+	padding:0px;
+  }
+  body{
+	background-image:url('body_bg.jpg');
+	background-repeat:repeat-x;
+	height:1500px;
+  }
+  .title{
+	margin:0 auto;
+	width:950px;
+	height:182px;
+	background:url('header_bg.jpg');
+	background-repeat:no-repeat;
+  }
+  .top ul{
+	float:right;
+	background-color:#66CCFF;
+	height:7px;
+	margin-right:24px;
+  }
+  .top li{
+	float:left;
+	height:23px;
+	list-style-type:none;
+	background-image:url('top_nav_li_bg.gif');
+	background-position:center right;
+	background-repeat:no-repeat;
+	padding-top:11px;
+	padding-right:10px;
+	padding-left:10px;
+
+  }
+  .top a:link{
+	font-size:small;
+	color:#66CCFF;
+	text-decoration:none;
+  }
+  .top a:hover{
+	color:#FFFFFF;
+	text-decoration:underline;
+	}
+	.nav{
+		background:url('nav_main_bg.gif');
+		width:642px;
+		height:55px;
+		background-repeat:no-repeat;
+		float:left;
+		margin-top:120px;/*也可以用绝对定位解决*/
+	}
+	.log{
+		background:url('login_bg.gif');
+		width:308px;
+		height:55px;
+		background-repeat:no-repeat;
+		float:right;
+		margin-top:120px;
+	}
+	.nav ul{
+		margin-left:35px;
+	}
+	.nav li{
+		float:left;
+		height:23px;
+		list-style-type:none;
+		padding-top:10px;
+		padding-right:10px;
+		padding-left:10px;
+	}
+	.nav a:link{
+		color:#003366;
+		font-size:13px;
+		text-decoration:none;
+	}
+	.nav a:hover{
+		font-weight:bold;
+	}
+	.log form{
+		float:right;
+		font-size:10px;
+		margin-right:62px;
+		margin-top:9px;
+		color:#003399;
+		/*white-space:pre;*/
+		}
+	.log #tb{
+		width:98px;
+		height:16px;
+		border:0px;
+		/*margin-right:8px;*/
+		border-bottom:1px solid #003399;
+		background-color:rgba(0,0,0,0);/*透明*/
+		
+	}
+	.log #tb2{
+		float:right;
+		position:absolute;
+		margin-left:9px;
+	}
+	.dabox{
+		width:950px;
+		height:1000px;
+		background:yellow;
+		margin:0 auto;
+		margin-top:2px;
+	}
+	.zuo-box{
+		float:left;
+		width:200px;
+	}
+	.zuo-1box{
+		background:url('weather_h1.gif');
+		background-repeat:no-repeat;
+		width:200px;
+		height:47px;
+	}
+	.zuo-1box .tianqi{
+		background:#FFF;
+		width:100%;
+		padding-bottom:5px;
+		}
+	h1 {
+	color:#6FF;
+	font-weight:normal;
+	padding:23px 0 0 72px;
+	width:128px !important;
+	height:24px !important;
+	width:190px;
+	height:42px;
+}
+  </style>
+ </head>
+ <body>
+ <div class="title">
+	<div class="top">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">论坛</a></li>
+			<li><a href="#">博客</a></li>
+			<li><a href="#">帮助</a></li>
+			<li><a href="#">站点地图</a></li>
+			<li><a href="#">关于我们</a></li>
+		</ul>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href="#">旅游情报</a></li>
+			<li><a href="#">走遍中国</a></li>
+			<li><a href="#">环游世界</a></li>
+			<li><a href="#">游记精选</a></li>
+			<li><a href="#">经典路线</a></li>
+			<li><a href="#">奇闻轶事</a></li>
+			<li><a href="#">旅游相册</a></li>
+			<li><a href="#">自助旅游</a></li>
+		</ul>
+	</div>
+	<div class="log">
+		<form>
+			昵称:<input id="tb"type="text"name="user"><input id="tb2"type="image"src="btn_login.gif"><br>
+			密码:<input id="tb"type="password"name="us"><input id="tb2"type="image"src="btn_reg.gif"style="margin-top:3px;">
+			</form>
+	</div>
+</div>
+	<div class="dabox">
+		<div class="zuo-box">
+			<div class="zuo-1box">
+				<h1><span>天气查询</span></h1>
+				<tr><td>1</td><td>2</td><td>3</td></tr>
+				<table class="tianqi">
+					
+					
+				</table>
+			</div>
+		</div>
+
+
+
+	</div>
+ </body>
+</html>

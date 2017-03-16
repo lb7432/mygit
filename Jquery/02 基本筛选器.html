@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+  
+		$("#box").css({"width":"500px","margin":"0 auto"});
+		$("p").css({"text-align":"center"});
+		/*解释：box里p标签的第一个元素*/
+		$("#box p:first").css({"color":"red","font-size":"30px","font-family":"微软雅黑"});
+		/*解释：box里除了.tb外的所有p*/
+		$("#box p:not(.tb)").css({"color":"blue"});
+		/*解释：box里偶数p标签*/
+		/*$("#box p:even").css({"color":"yellow"});*/
+		/*box里奇数p标签*/
+		//$("#box p:odd").css({"color":"yellow"});
+		//box里序号是3的p标签
+		//$("#box p:eq(3)").css({"color":"yellow"});
+		//box里序号大于3的所有p
+		//$("#box p:gt(3)").css({"color":"yellow"});
+		//box里序号小于3的所有p
+		//$("#box p:lt(3)").css({"color":"yellow"});
+		//通过内容选里面有“哈”的标签
+		//$("#box p:contains(哈)").css({"color":"yellow"});
+		//选择的是box里所有的空的p标签
+		$("#box p:empty").css({"background":"yellow",'height':'30px','width':'200px'});
+		//选择的是boxli含有span标签的p标签
+		$("#box p:has(span)").css({"color":"yellow"});
+		//选择的是box里所有包含class属性的p标签
+		$("#box p[class]").css({"color":"red"});
+		//可以自定义属性并选择
+		$("#box p[hd]").css({"color":"black"});
+	})
+  </script>
+  </head>
+ <body>
+ <div id="box">
+	<p>大中国顶顶顶顶顶</p>
+	<p class="tb">大中国顶顶顶顶顶</p>
+	<p>大中国顶顶顶顶顶<span>你好</span></p>
+	<p hd="sd">大中国顶顶顶顶顶</p>
+	<p>大中国顶顶顶顶顶</p>
+ <div>
+	<p>大中国顶顶顶顶顶</p>
+	<p>大中国顶顶顶顶顶</p>
+	<p>大中国顶顶顶顶顶</p>
+ </div>
+ <div id="dow">
+	<p>我的顶顶顶顶顶顶顶顶</p>
+	<p class="sb">我的顶顶顶顶顶顶顶顶</p>
+	<p>我的顶顶顶顶顶顶顶顶<span>你好</span></p>
+	<p>我的顶顶顶顶顶顶顶顶</p>
+	<p></p>
+	<p></p>
+ </div>
+ <div>
+	<p>分哈哈哈哈哈哈</p>
+	<p>分哈哈哈哈哈哈</p>
+	<p>分哈哈哈哈哈哈</p>
+ </div>
+ </div>
+ </body>
+</html>

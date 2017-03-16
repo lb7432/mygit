@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var keychar = 0;
+  function ceshi(event)
+  {
+	  /*var bb = document.getElementById("ss");*/
+	  var bb = event.keyCode;
+	  keychar = String.fromCharCode(bb)/*k码转为按键*/
+	  alert(keychar);
+	  /*alert(event.which)*/
+  }
+  </script>
+  </head>
+ <body id="ss"onkeydown="ceshi(event)">
+ </body>
+</html>

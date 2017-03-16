@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>超链接与锚点技术</title>
+ </head>
+ <body>
+ <!--taeget表示是当前页面打开还是开一个新窗口,_blank新页面打开，_self本页面打开-->
+  <a href="http://www.baidu.com"target="_blank">老鼠爱大米</a><br><!--折行-->
+  <a href="./123.html"target="_blank">老鼠不爱大米</a>
+ </body>
+</html>

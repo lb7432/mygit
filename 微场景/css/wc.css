@@ -1,0 +1,298 @@
+/*原生模板开始*/
+html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background:#FFFFFF;
+        /* Center slide text vertically */
+        /*display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;*/
+    }
+    /*原生模板结束*/
+   
+/*音乐图标开始*/
+	#music{
+		width: 60px;
+		height: 60px;
+/*		border: 1px solid blueviolet;*/
+		position: fixed;
+		top: 8px;
+		right: 8px;
+		z-index: 6;
+	}
+	#music .music_gif{
+		width: 60px;
+	}
+	#music .music_off{
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		animation: xz 4s linear infinite;
+	}
+	@keyframes xz{
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+/*音乐图标结束*/
+
+/*第一屏开始*/
+    .swiper-slide.one{
+        background: url(../image/onebg.png) no-repeat;
+		background-size: 100% 100%;
+		}
+	.swiper-slide #one_box{
+		width: 70%;
+		height: 50%;
+		border: 8px solid white;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-top: 8%;
+	}
+	.swiper-slide #one_box img{
+		width: 100%;
+	}
+	.swiper-slide #two_box{
+		width: 70%;
+		height: 32%;
+		/*border: 1px solid blue;*/
+		margin: 0 auto;
+		margin-top: 5%;
+		position: relative;
+	}
+	.swiper-slide #two_box .marry{
+		width: 100%;
+		position: absolute;
+		top: 10%;
+		left: 0px;
+	}
+	.swiper-slide #two_box .ring{
+		position: absolute;
+		width: 35%;
+		top: 0px;
+		left: 5%;
+	}
+	.swiper-slide #two_box .timer{
+		position: absolute;
+		width: 50%;
+		bottom: 0px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+/*第一屏结束*/
+/*<!--第二屏开始-->*/
+	.swiper-slide.two{
+		background: url(../image/twobg.jpg) no-repeat;
+		background-size:100% 100% ;
+		position: relative;
+	}
+	.swiper-slide #two_left{
+		width: 30%;
+		height: 20%;
+		border: 8px solid #FEEAEA;
+		overflow: hidden;
+		position: absolute;
+		left: 5%;
+		top: 5%;
+		z-index: 20;
+	}
+	.swiper-slide #two_left .two_one{
+		width: 100%;
+	}
+	.swiper-slide #two_right{
+		width: 60%;
+		height: 80%;
+		border: 8px solid #FEEAEA;
+		position: absolute;
+		right:5%;
+		top: 10%;
+		background: #FFEBEB;
+	}
+	.swiper-slide #two_right #two_right_one{
+		width: 100%;
+		height: 60%;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.swiper-slide #two_right #two_right_one .two_two{
+		width: 100%;
+	}
+	.swiper-slide #two_right #two_right_one .windmill{
+		position: absolute;
+		width: 50%;
+		right: -10%;
+		bottom: -6%;
+	}
+	.swiper-slide #two_right>img{
+		width: 100%;
+		float: left;
+		margin-top: 1.5%;
+	}
+/*<!--第二屏结束-->*/
+/*第三屏开始*/
+	.swiper-slide.three{
+		background: url(../image/twobg.jpg) no-repeat;
+		background-size:100% 100% ;
+		position: relative;
+	}	
+	.swiper-slide .hua{
+		width: 80%;
+		position: absolute;
+		right: 0%;
+		top: 0%;
+		z-index: 30;
+	}
+	.swiper-slide .three_box{
+		width: 70%;
+		height: 60%;
+		margin: 0 auto;
+		margin-top: 10%;
+		border: 8px solid #FFFFFF;
+		overflow: hidden;
+	}
+	.swiper-slide .three_box .three_one{
+		width: 100%;	
+	}
+	.swiper-slide .dog{
+		width: 30%;
+		position: absolute;
+		top:58%;
+		right: 20%;
+	}
+	.swiper-slide .aini{
+		width: 70%;
+/*		position: absolute;*/
+		display: block;
+		margin-left: 30%;
+		margin-top: 5%;
+	}
+	.swiper-slide .yibeizi{
+		width: 70%;
+		display: block;
+		margin-left: 30%;
+		margin-top: 5%;
+	}
+	.swiper-slide .hua_two{
+		width: 80%;
+		position: absolute;
+		left: 0%;
+		bottom: 0%;
+	}
+/*第三屏结束*/
+
+/*第四屏开始*/
+	.swiper-slide.four{
+		background: url(../image/twobg.jpg) no-repeat;
+		background-size:100% 100% ;
+		position: relative;
+	}
+	.swiper-slide #four{
+		width: 85%;
+		height: 70%;
+		border: 8px solid #FFFFFF;
+		margin: 0 auto;
+		margin-top: 10%;
+		position: relative;
+	}
+	.swiper-slide #four .four_left_top{
+		width: 50%;
+		height: 25%;
+		position: absolute;
+		overflow: hidden;
+		left: 0%;
+		top: 0%;
+		float: left;
+	}
+	.swiper-slide .four_left_top img{
+		width: 125%;
+		height: 100%;
+	}
+	.swiper-slide #four .four_right_top{
+		width: 50%;
+		height: 60%;
+		position: absolute;
+		overflow: hidden;
+		right:0%;
+		top: 0%;
+		float: left;
+	}
+	.swiper-slide .four_right_top img{
+		width: 106%;
+		height: 100%;
+	}
+		.swiper-slide #four .four_left_bottom{
+		width: 50%;
+		height: 75%;
+		position: absolute;
+		overflow: hidden;
+		left:0%;
+		bottom: 0%;
+		float: left;
+	}
+	.swiper-slide .four_left_bottom img{
+		width: 127%;
+		height: 100%;
+	}
+	.swiper-slide #four .four_right_bottom{
+		width: 50%;
+		height: 40%;
+		position: absolute;
+		overflow: hidden;
+		right:0%;
+		bottom: 0%;
+		float: left;
+	}
+	.swiper-slide .four_right_bottom img{
+		width: 116%;
+		height: 100%;
+	}
+	.swiper-slide.four .zi{
+		width: 90%;
+		height: 6%;
+		position: absolute;
+		bottom: 15%;
+		left: 50%;
+		transform:  translateX(-50%);
+		z-index: 22;
+	}
+	.swiper-slide.four .zi img{
+		width: 46%;
+		float: left;
+		margin-left: 2%;
+	}
+	.swiper-slide.four .hua_two{
+		width: 70%;
+		position: absolute;
+		left: 0%;
+		bottom: 0%;
+	}
+/*第四屏结束*/

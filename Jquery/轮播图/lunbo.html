@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <style type="text/css">
+  #box{
+	width:1200px;
+	height:576px;
+	border:2px solid black;
+	/*display:hidden;*/
+	margin:50px auto;
+  }
+  img{
+	position:absolute;
+	z-index:-1;
+  }
+  .zhishi{
+	width:300px;
+	height:50px;
+	/*position:absolute;*/
+	margin:500px auto 0;
+  }
+  /*ul{
+	margin:0 auto;
+  }*/
+  li{
+	float:left;
+	width:25px;
+	height:5px;
+	list-style-type:disc;
+	font-size:38px;
+	color:#DDDDDD;
+  }
+  li:hover{
+	color:#A10000;
+	cursor:pointer;
+  }
+  </style>
+  </head>
+ <body>
+ <div id="box">
+ <img id="tu"src="1.jpg">
+ <div class="zhishi">
+ <ul id="dian">
+	<li id="a"onmouseover="huan(this)"class="1"></li>
+	<li id="b"onmouseover="huan(this)"class="2"></li>
+	<li id="c"onmouseover="huan(this)"class="3"></li>
+	<li id="d"onmouseover="huan(this)"class="4"></li>
+	<li id="e"onmouseover="huan(this)"class="5"></li>
+	<li id="f"onmouseover="huan(this)"class="6"></li>
+ </ul>
+ <div>
+ </div>
+ </body>
+ <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  var p = 0;
+   
+  function huan(s){
+		p = s.className;
+		document.getElementById('tu').src =""+p+".jpg";
+  }
+  </script>
+</html>

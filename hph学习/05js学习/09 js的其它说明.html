@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>js的其它说明</title>
+  <script type="text/javascript">
+  function sum()
+  {
+	  var parameters_len = arguments.length;//parameter 参数
+	  var sum = 0;
+	  for(var i = 0; i < parameters_len; i++)
+	  {
+		  sum +=arguments[i];
+	  }
+	  window.alert(sum);
+  }
+  sum(10, 20, 11);
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  *{
+  	margin: 0;
+  	padding: 0;
+  }
+  	#box{
+  		width: 1200px;
+  		height: 535px;
+  		border: 2px solid darkblue;
+  		margin: 30px auto;
+  		position: relative;
+  	}
+  	img{
+  		position: absolute;
+  		display: none;
+  	}
+  	#ull{
+  		position: absolute;
+  		left: 542px;
+  		bottom: 23px;
+  	}
+  	#ull li{
+  		list-style: none;
+  		float: left;
+  		width: 12px;
+  		height: 12px;
+  		background: black;
+  		margin-right: 10px;
+  		border-radius: 50%;
+  	}
+  </style>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+  	var c=0;
+//	定时器函数
+  	function ds(){
+  		  	$("#box img").eq(c).fadeIn(500).siblings("img").fadeOut(500);
+		  	$("#box ul li").eq(c).css({'background':'#8B0000'}).siblings("li").css({'background':'#000000'});
+  		  	c++;
+  		  	if (c==5) {
+  		  		c=0;
+  		  	}
+  		 }
+//	定时器
+  	var timer = setInterval(ds,1000);
+//	加入鼠标移入事件mouseover——>mouseenter
+  	$("#box ul li").mouseenter(function(){
+  		clearInterval(timer);
+//		将触发事件的序号传给c
+  		c = $(this).index();
+//		加入.stop可以避免快速切换后图片延迟切换问题
+  		$("#box img").eq(c).stop().fadeIn().siblings("img").stop().fadeOut();
+  		
+		$("#box ul li").eq(c).css({'background':'#8B0000'}).siblings("li").css({'background':'#000000'});
+  	})
+//	鼠标移出事件
+  	$("#box ul li").mouseleave(function(){
+  		timer = setInterval(ds,1000);
+  	})
+  })
+  </script>
+  </head>
+ <body>
+ 	<div id="box">
+ 		<img src="1.jpg"style="display: block;"/>
+ 		<img src="2.jpg"/>
+ 		<img src="3.jpg"/>
+ 		<img src="4.jpg"/>
+ 		<img src="5.jpg"/>
+ 		<ul id="ull">
+ 			<li style="background: darkred;"></li>
+ 			<li></li>
+ 			<li></li>
+ 			<li></li>
+ 			<li></li>
+ 		</ul>
+ 	</div>
+ </body>
+<

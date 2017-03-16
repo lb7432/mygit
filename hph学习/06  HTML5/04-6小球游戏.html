@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+ </head>
+ <body onkeydown="move_ball(event)">
+ <canvas id="huabu" width="800px" height="600px"style="border:1px solid black">
+  <script type="text/javascript">
+  var my_canvas = document.getElementById("huabu");
+  var my_huabi = my_canvas.getContext("2d");
+  var ball_x = 50;
+  var ball_y = 50;
+  hua_ball();
+  function hua_ball()
+  {
+	my_huabi.beginPath();
+	my_huabi.fillStyle = "red";
+	my_huabi.beginPath();
+	my_huabi.arc(ball_x,ball_y,20,0,2*Math.PI);
+	my_huabi.fill();
+  }
+  function move_ball(event)
+  {
+	  switch (event.keyCode)
+	  {
+	  case 65://a默认是大写阿斯克码
+			if (ball_x ==26 )
+			{
+			}else
+			{
+				my_huabi.clearRect(0,0,800,600);
+				ball_x -=8;
+				hua_ball();
+			}
+			break;
+	  case 87://w
+			if (ball_y ==26 )
+			{
+			}else
+			{
+				my_huabi.clearRect(0,0,800,600);
+				ball_y -=8;
+				hua_ball();
+			}
+			break;
+	  case 83://s
+			if (ball_y < 580)
+			{
+				my_huabi.clearRect(0,0,800,600);
+				ball_y +=8;
+				hua_ball();
+			}
+			break;
+	  case 68://d
+			if (ball_x < 780)
+			{
+				my_huabi.clearRect(0,0,800,600);
+				ball_x +=8;
+				hua_ball();
+			}
+			break;
+	  }
+  }
+  </script>
+ </body>
+</html>

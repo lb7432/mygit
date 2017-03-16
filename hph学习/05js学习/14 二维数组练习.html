@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  /*
+  请用二维数组输出如下图形：
+	0 0 0 0 0 0
+	0 1 0 0 0 0
+	0 2 0 3 0 0
+	0 0 0 0 0 0
+*/
+	var a = [[0, 0, 0, 0, 0, 0],[0, 1, 0, 0, 0, 0],[0, 2, 0, 3, 0, 0],[0, 0, 0, 0, 0, 0]];
+	var a_hang = a.length;
+	for (i = 0;i < a_hang; i++)
+	{
+		var a_lie = a[i].length;
+		for (j = 0;j < a_lie; j++)
+		{
+			document.write(a[i][j]+" ");
+		}
+		document.write("<br>");
+	}
+  </script>
+ </head>
+ <body>
+ </body>
+</html>

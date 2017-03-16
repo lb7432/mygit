@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>window对象小闹钟</title>
+  <script type="text/javascript">
+  function showTime()
+  {
+	  var x = document.getElementById("clock");
+	  var new_time =new Date();
+	  new_time = new_time.toLocaleString();
+	  x.innerHTML = new_time;
+  }
+  var y = setInterval("showTime()", 1000)
+   function showTime2()
+  {
+	  var x = document.getElementById("clock");
+	  var new_time =new Date();
+	  new_time = new_time.toLocaleString();
+	  x.innerHTML = new_time;
+	  var y = setInterval("showTime2()", 1000)
+  }
+  </script>
+ </head>
+ <body>
+	小闹钟：<span id="clock"></span>
+	<input type="button" value="点击停止" onclick="clearInterval(y)"/>
+	<input type="button" value="点击开始" onclick="showTime2()"/>
+ </body>
+</html>

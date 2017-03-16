@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var x = 3;
+  function ok()
+  {
+	  var second = document.getElementById("ban");
+	  second.innerHTML = x;
+	  x--;
+	  if (x == -1)
+	  {
+		  window.open("27 admin.html","_self");
+	  }
+  }
+  window.setInterval("ok()", 1000);
+  </script>
+ </head>
+ <body bgcolor="pink">
+ <h3 style="color:red">恭喜你登录成功！</h3>
+ <br>
+ <span id="ban">4</span>秒后跳转至管理界面!
+ </body>
+</html>

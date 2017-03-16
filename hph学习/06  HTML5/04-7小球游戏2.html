@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+ </head>
+ <body bgcolor="black">
+ <canvas id="huabu" width="800px" height="600px"style="border:1px solid yellow">
+ <script type="text/javascript">
+ var ball_x = 50;
+ var ball_y = 50;
+ var ball_r = 20;
+ var ball_sp = 1;
+ var my_canvas = document.getElementById("huabu");
+ var my_huabi = my_canvas.getContext("2d");
+ function hua_ball(x,y)
+ {
+	 my_huabi.beginPath()
+	 my_huabi.fillStyle = "red";
+	 my_huabi.arc(x,y,ball_r,0,2*Math.PI);
+	 my_huabi.fill();
+ }
+ //hua_ball(ball_x,ball_y);
+ var ball_x_fx = true;
+ var ball_y_fx = true;
+ window.setInterval("move_ball()",5);
+ function move_ball()
+ {
+	 //x方向运动
+	 if (ball_x_fx)
+	 {
+		 ball_x += ball_sp;
+		 if (ball_x >= 800-ball_r)
+		 {
+			 ball_x_fx = false;
+		 }
+	 }else{
+		 ball_x -= ball_sp;
+		 if (ball_x <= ball_r)
+		 {
+			 ball_x_fx = true;
+		 }
+	 }
+	 //y方向运动
+	 if (ball_y_fx)
+	 {
+		 ball_y += ball_sp;
+		 if (ball_y >= 600-ball_r)
+		 {
+			 ball_y_fx = false;
+		 }
+	 }else{
+		 ball_y -= ball_sp;
+		 if (ball_y <= ball_r)
+		 {
+			 ball_y_fx = true;
+		 }
+	 }
+	 my_huabi.clearRect(0 ,0 ,800 ,600);
+	 hua_ball(ball_x,ball_y);
+ }
+  </script>
+ </body>
+</html>

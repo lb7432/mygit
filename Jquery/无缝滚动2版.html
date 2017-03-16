@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  	<style type="text/css">
+  	*{
+  		margin:0;
+  		padding: 0;
+  	}
+  		#box{
+  			width: 400px;
+  			height: 40px;
+  			border: 2px solid black;
+  			margin: 100px auto;
+  			position: relative;
+  			overflow: hidden;
+  			
+  		}
+  		.ull{
+  			position: absolute;
+  			bottom: -40px;
+  		}
+  		.ull li{
+  			list-style: none;
+  			width: 400px;
+  			height:40px;
+  			line-height: 40px;
+  		}
+  	</style>
+   <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+  	setInterval(function(){
+//	先把第一个li高度变为0;
+	$(".ull li").first().height(0);
+//	再把第一个li加到ul里的最后一个
+	$(".ull").append($(".ull li").first());
+//	最后把最后的li高度变为40
+	$(".ull li").last().animate({'height':'40px'},500);
+  		},1000)
+  })
+  </script>
+  </head>
+ <body>
+ 	<div id="box">
+ 			<ul class="ull">
+ 				<li style="background: blueviolet;">游民星空在免安装版本中加入了专用的游戏启动器</li>
+ 				<li style="background: deepskyblue;">方便玩家最快找到游戏运行程序，有些游戏的运行</li>
+ 				<li style="background: palevioletred;">直接运行原本的游戏执行程序即可，每个游戏ddd</li>
+ 			</ul>
+ 	</div>
+ </body>
+</html>

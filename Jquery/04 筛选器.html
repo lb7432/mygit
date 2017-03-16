@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+	  //�ͻ�ɸѡ������һ��ֻ������д����һ��
+	  $("div p").first().css({'color':'blue'});
+	  //��õ�ǰ�����Ԫ���Ƿ���class��o�ģ�������򷵻�ture;
+	  /*$("div p").click(function(){
+		  var er = $(this).hasClass('o');
+		  alert(er);
+	  })*/
+	  //�ҵ�����div���p��ǩ���ٴ���˧ѡ�����class��o�ģ�
+	  //$("div p").filter('.o').css({'color':'red'});
+	  //ɸѡdiv��p��ǩ�ڶ��������(����2������5)����ʼ�������
+	  $("div p").slice(2,5).css({'color':'purple'});
+	  //div�������Ӵ�ֵ�p��ǩ
+	  //$("div").find('p').css({'color':'blue'});
+	  //class��o������ͬ���ֵ�Ԫ�أ�������.o 
+	  $(".o").siblings().css({'color':'red'});
+
+  })
+  </script>
+  </head>
+ <body>
+ <div>
+	<p>�ֹ�����������</p>
+	<span>���˵��</span>
+	<p>�ֹ�����������</p>
+	<span>���˵��</span>
+	<p>�ֹ�����������</p>
+	<p>�ֹ�����������</p>
+	<span>���˵��</span>
+	<p class="o">�ֹ�����������</p>
+	<span>���˵��</span>
+	<p>�ֹ�����������</p>
+ </div>
+ <hr>
+ <div>
+	<p>�ֹ�����������</p>
+	<span>���˵��</span>
+	<p>�ֹ�����������</p>
+	<span>���˵��</span>
+	<p>�ֹ�����������</p>
+ </div>
+ </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+ </head>
+ <body>
+ <canvas id="huabu" width="800px" height="600px"style="border:1px solid black">
+ <script type="text/javascript">
+ //1 画一条线
+ //先获取画布对象
+ var my_canvas = document.getElementById("huabu");
+ //获取画笔
+ var my_huabi = my_canvas.getContext("2d");
+ //给画笔设置颜色
+ my_huabi.strokeStyle = "red";
+ //开始画线
+
+ //创建新路径
+ my_huabi.beginPath();
+ //创建起点
+ my_huabi.moveTo(30,10);
+ //创建终点
+ my_huabi.lineTo(30,400);
+ //划出线
+ my_huabi.stroke();
+
+
+  </script>
+ </body>
+</html>

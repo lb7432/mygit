@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var a = 0;
+  var b = 0;
+  var sign = 0;
+  //输入函数
+  //注意：像sum这样的关键词不能用
+  //要用document.xxxxx.value时一定要用Id，不能用name
+  function $(id)
+  {
+	    return document.getElementById(id).value
+  }
+  function Num()
+  {
+		a = $("numa");
+		a = parseFloat(a);
+		b = $("numb");
+		b = parseFloat(b);
+		sign = $("mark");
+	  switch (sign)
+	  {
+	  case "+":
+			document.getElementById("result").value = a + b;
+			break;
+	  case "-":
+			document.getElementById("result").value	= a - b;
+			break;
+	  case "*":
+			document.getElementById("result").value	= a * b;
+			break;
+	  case "/":
+			document.getElementById("result").value	= a / b;
+			break;
+	   }
+  }
+  </script>
+ </head>
+ <body>
+ <h1>简单的js计算器</h1>
+ <form>
+请输入数:<input type="text" id="numa" value=""><br>
+ </form>
+选择运算:
+<select id="mark">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+<br>
+</select>
+<form>
+请输入数:<input type="text" id="numb"><br>
+点击运算:<input type="button" value="=" name="sum" onclick="Num()"><br>
+计算结果:<input type="text" id="result" value=""><br>
+ </form>
+ </body>
+</html>

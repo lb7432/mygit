@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+   <script type="text/javascript">
+  window.onload = function(){
+	var but = document.getElementById('but');
+	var tu = document.getElementById('tu');
+	var num = 1;
+	but.onclick = function(){
+		if (num == 1)
+		{
+			tu.style.display = "none";
+			num = 2;
+		}else{
+			tu.style.display = "block";
+			num = 1;
+		}
+	}
+}
+  </script>
+  </head>
+ <body>
+ <input id="but" type="button"value="点我呀.."><br>
+ <img id="tu" src="gw.jpg">
+ </body>
+
+</html>

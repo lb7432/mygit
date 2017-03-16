@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var ban = 0;
+  var num = 0;
+  //undertake 担保，负责
+  function undertake()
+  {
+	 num++;
+	 ban = document.getElementById("second");
+	 ban.src="" + num + ".jpg";
+	 if (num == 9)
+	 {
+		 window.clearInterval(sandwich);
+	 }
+  }
+  var sandwich = window.setInterval("undertake()", 3000);
+  function act()
+  {
+	 num = 0;
+	 var sandwich1 = window.setInterval("undertake()", 3000);
+	 if (num == 9)
+	 {
+		 window.clearInterval(sandwich1);
+	 }
+  }
+  </script>
+  <style type="text/css">
+  body{
+	background:url("bg.jpg");
+	}
+  img{
+	border:2px solid white;
+	width:400px;
+	margin-top:80px;
+	margin-left:450px;
+	}
+  input{
+	position:absolute;
+	top:630px;
+	left:600px;
+  }
+  </style>
+ </head>
+ <body>
+ <img id="second" src="0.jpg">
+ <input type="button" value="重新播放" onclick="act()">
+ </body>
+</html>

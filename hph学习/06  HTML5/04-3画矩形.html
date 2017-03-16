@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+ </head>
+ <body>
+ <canvas id="huabu" width="800px" height="600px"style="border:1px solid black">
+ <script type="text/javascript">
+  var my_canvas = document.getElementById("huabu");
+  var my_huabi = my_canvas.getContext("2d");
+  my_huabi.strokeStyle = "blue";
+  //画一个矩形
+  my_huabi.beginPath();
+  //四个参数(起点x,起点y,width,height);
+  my_huabi.rect(50,50,300,300);
+  my_huabi.stroke();
+  //画一个填充矩形
+  my_huabi.fillStyle = "grey";
+  my_huabi.fillRect(400,50,300,300);
+
+  </script>
+ </body>
+</html>

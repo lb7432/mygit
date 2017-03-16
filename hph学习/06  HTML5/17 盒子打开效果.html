@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <style type="text/css">
+  div{
+	width:200px;
+	height:200px;
+	border:2px solid black;
+	margin:0 auto;
+  }
+  #up{
+	position:absolute;
+	transform-origin:left;
+	transition:all 3s;
+  }
+  #down{
+	position:absolute;
+	z-index:-1;
+  }
+  #up:hover{
+	transform:rotateY(180deg);
+  }
+  </style>
+ </head>
+ <body>
+ <div>
+	<img id="up" src="tou.jpg">
+	<img id="down" src="wukong.jpg">
+ </div>
+ </body>
+</html>

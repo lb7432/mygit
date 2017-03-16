@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  	*{
+  		margin: 0;
+  		padding: 0;
+  	}
+  	#tu{
+  		margin: 0 auto;
+  		display: block;
+  	}
+  	div{
+  		width: 400px;
+  		height: 50px;
+  		margin: 0 auto;
+  	}
+  	#act{
+  		width: 200px;
+  		height: 40px;
+  		margin-left: 70px;
+  	}
+  	img{
+  		width: 400px;
+  	}
+  </style>
+  <script type="text/javascript">
+  	window.onload = function(){
+  		var act = document.getElementById("act");
+  		var tu = document.getElementById("tu");
+  		var timer = 0;
+  		var jian = 1;
+  		var arr  =["img/xiexiehuigu.jpg","img/angelababy.jpg","img/bujiadi.jpg","img/liudehua.jpg","img/liuyifei.jpg","img/meinv2.jpg","img/qian.jpg","img/quanzhilong.jpeg","img/youting.jpg","img/zhishengji.jpg"];
+  		act.onclick = function(){
+  			if (jian == 1) {
+  					clearInterval(timer);
+//			加定时器
+//	tu.src = arr[1];
+  			timer = setInterval(function(){
+//				Math.floor(Math.random()*(y+1-x)+x);
+//取随机数
+//				var  i = Math.floor(Math.random()*(arr.length+1);
+				var i = Math.floor(Math.random()*(arr.length-1+1));
+//				将取得值付给图片
+				tu.src =arr[i] ;
+  			},100);
+  			jian = 0;
+  		}else{
+  			clearInterval(timer);
+  			var  j = Math.floor(Math.random()*10);
+  			if (j < 7) {
+  				tu.src = arr[0];
+  			}
+  			jian = 1;
+  		}
+  	}
+ }
+  </script>
+  </head>
+ <body>
+ 	<div>
+ 	<input type="button"value="开始/停止" id="act"/><br>
+ 	</div>
+ 	<img src="img/xiexiehuigu.jpg" id="tu" />
+ </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <style type="text/css">
+  *{
+    margin:0px;
+	padding:0px;
+  }
+  /*标题头部*/
+  body{
+	background:url(header_bg.png);
+	background-repeat:repeat-x;
+  }
+  /*标题logo*/
+  #logo{
+    margin:123px auto 0;
+	width:330px;
+	height:41px;
+	background:url(logo_ico.png);
+  }
+  /*登录框背景*/
+  #bg{
+    margin-top:15px;
+    height:483px;
+	overflow:hidden;/*多余部分被修剪*/
+	background-color:#ededed;
+  }
+  /*登录框*/
+  #login{
+    background:url(login_bg.png);
+    margin:54px auto 0;
+	width:423px;
+	height:366px;
+	border:1px solid #ededed;
+  }
+  /*input属性左浮动*/
+  #input1,#input2,#danxuan,#sub{
+	float:left;
+  }
+  /*登录管理图片*/
+  #member{
+    background:url(member_title.png);
+	width:133px;
+	height:36px;
+	float:left;
+	margin:37px 0 0 94px;
+  }
+  /*输入框属性*/
+  #name,#pass,#danxuan{
+    margin:16px 0 0 90px;
+	color:#555;
+	border:1px solid white;
+  }
+  #name{
+    background:url(input_name.png) no-repeat;
+	height:50px;
+	width:237px;
+  }
+  #pass{
+    background:url(input_password.png) no-repeat;
+	height:50px;
+	width:237px;
+  }
+  #danxuan{
+    width:200px;
+	height:23px;
+	font-size:10px;
+  }
+  #sub input{
+	margin:10px 135px;;
+	width:150px;
+	height:50px;
+  }
+  </style>
+ </head>
+ <body id="header">
+ <div id="logo"></div>
+  <div id="bg">
+    <div id="login">
+     <div id="member"></div>
+	  <form action="http://www.baidu.com" method="get" onsubmit="return checkNow()">
+	   <div id="input1"><input type="text" name="name" id="name" value=""></div>
+	   <div id="input2"><input type="password" name="pass" id="pass" value=""></div>
+	   <div id="danxuan"><input type="checkbox"><span>记住密码</span></div>
+	   <div id="sub">
+		 <input type="image" src="./button.png" alt="submit">
+	   </div>
+	  </form>
+    </div>
+  </div>
+ <script type="text/javascript">
+  function checkNow()
+  {
+	  //用户名和密码不能为空
+	  //先获取到用户名和密码
+	  var myadmin = $("name");
+	  var mymima = $("pass");
+	  //判断
+	  if (myadmin.value == "")
+	  {
+		  alert("用户名不能为空");
+		  return false;
+	  }else if (mymima.value == "")
+	  {
+          alert("密码不能为空");
+		  return false;
+	  }else if (myadmin.value.indexOf("@") == -1)
+	  {
+		  alert("用户名格式不正确");
+		  myadmin.value = "";
+		  return false;
+	  }else if (mymima.value.length < 6)
+	  {
+		  alert("密码必须大于6位");
+		  mymima.value = "";
+		  return false;
+	  }else {
+	      return true;
+	  }
+  }
+  function $(id)
+  {
+	  return document.getElementById(id);
+  }
+ </script>
+ </body>
+</html>

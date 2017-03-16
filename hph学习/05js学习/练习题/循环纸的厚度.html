@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  //一张纸厚0.01毫米，对折30次是多厚；相反的，一张纸对折多少次后，就超过1米了？
+  //第一问？
+  var initial = 0.01;
+  for (i = 1; i <= 30; i++)
+  {
+	  initial +=initial;
+  }
+  var sum = initial / 1000;
+  window.alert("对折30次后厚" + sum.toFixed(3) +"米");
+  //第二问？
+  var z = 0;
+  for (j = 0.01; j <= 1000;)
+  {
+	  z++;
+	  j += j;
+  }
+  window.alert("对折"+ z +"次后超过1米");
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

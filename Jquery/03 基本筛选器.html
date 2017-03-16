@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+	  //选择的是div中p标签的父级的第一个子元素(父级的第一个子元素必须是p标签)
+	  $("div p:first-child").css({'color':'red'});
+	  //选择的是div中span标签的父级元素的第一个span标签
+	  $("div span:first-of-type").css({'color':'blue'});
+	  //给元素加事件
+	  $("div p").click(function(){
+		alert("你好lll");
+	  
+	  })
+  })
+  </script>
+  </head>
+ <body>
+ <div>
+	<p>分哈哈哈哈哈哈</p>
+	<span>给个说法</span>
+	<p>分哈哈哈哈哈哈</p>
+	<span>给个说法</span>
+	<p>分哈哈哈哈哈哈</p>
+ </div>
+ <hr>
+ <div>
+	<p>分哈哈哈哈哈哈</p>
+	<span>给个说法</span>
+	<p>分哈哈哈哈哈哈</p>
+	<span>给个说法</span>
+	<p>分哈哈哈哈哈哈</p>
+ </div>
+ <hr>
+ <div>
+	<p>分哈哈哈哈哈哈</p>
+	<span>给个说法</span>
+	<p>分哈哈哈哈哈哈</p>
+	<span>给个说法</span>
+	<p>分哈哈哈哈哈哈</p>
+ </div>
+ </body>
+</html>

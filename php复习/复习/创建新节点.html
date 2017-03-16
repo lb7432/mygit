@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+ 	window.onload = function(){
+ 		var put = document.getElementById("put");
+ 		var ull = document.getElementById('ull');
+ 		put.onclick = function(){
+ 			var new_li = document.createElement("li");
+ 			var new_text = document.createTextNode('love');
+ 			new_li.appendChild(new_text);
+ 			ull.appendChild(new_li);
+ 		}
+ 	}
+  </script>
+  </head>
+ <body>
+ 	<input type="button"value="点我"  id="put"/><br />
+ 	<ul id="ull">
+ 		<li>good!!</li>
+ 	</ul>
+ </body>
+</html>

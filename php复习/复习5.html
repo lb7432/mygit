@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var x = window.prompt("请输入一个数");
+  x = parseInt(x);
+  for (i = 1; i <= x; i++)
+  {
+	  for (j = 1; j <= (x - i); j++)
+	  {
+		  document.write("/");
+	  }
+	  for (k = 1; k <= 2*i-1; k++)
+	  {
+		  document.write("*");
+	  }
+	  document.write("<br>");
+  }
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

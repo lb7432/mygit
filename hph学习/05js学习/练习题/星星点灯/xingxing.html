@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html onclick="op()">
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  function op()
+  {
+		//创建图片元素
+		var ph = document.createElement("img");//里面放文件类型
+		//设置图片地址和样式（位置，大小）
+		ph.src = "star1.gif";
+		//先定位!
+		ph.style.position = "absolute"
+		//注意！一定要加px
+		ph.style.width = ph_size(30,120)+"px";
+		ph.style.top = event.clientY + "px";
+		ph.style.left = event.clientX + "px";
+		//设置图片的大小随机产生
+		//把图片放到body中
+		document.body.appendChild(ph);
+  }
+  //随机数函数
+  function ph_size(min,max)
+  {
+	  var Size = Math.random() * (max - min ) + min;
+	  Size = Math.ceil(Size);
+	  return Size;
+  }
+  </script>
+ </head>
+ <body bgcolor="#000000">
+ </body>
+</html>

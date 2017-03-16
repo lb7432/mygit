@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  function check() 
+  {
+	  if (denglu.admin.value == "刘泊" && denglu.password.value == "123")
+	  {
+		  window.open("27 landok.html");
+	  }else
+		{
+			window.alert("用户名或密码不正确，请重新输入");
+			denglu.admin.value = "";
+			denglu.password.value = "";
+		}
+  }
+  </script>
+  <style type="test/css">
+  </style>
+ </head>
+ <body bgcolor="pink">
+ <form name="denglu" action="" method="get">
+ 用户名：
+ <input type="text" value="" name="admin"><br>
+ <span>密&nbsp码：</span>
+ <input type="password" value="" name="password"><br>
+ <input type="button" value="登录" onclick="check()">
+ </form>
+ </body>
+</html>

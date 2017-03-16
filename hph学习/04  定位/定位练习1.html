@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>定位练习1</title>
+  <style type="text/css">
+	body{
+		border:1px solid black;
+		width:800px;
+		height:600px;
+		position:relative;
+
+	}
+	.box{
+		width:100px;
+		height:60px;
+		background:#00FF00;
+		float:left;
+		margin:10px;
+	}
+	.allbox{
+		width:300px;
+		height:200px;
+		background:gray;
+		position:absolute;
+		top:400px;
+		left:300px;
+	}
+	.tb{
+		position:absolute;
+		top:10px;
+		left:20px;
+	}
+  </style>
+ </head>
+ <body>
+ <div class="box">内容1</div>
+ <div class="allbox">
+ <div class="box tb">内容2</div>
+ </div>
+ <div class="box">内容3</div>
+ <div class="box">内容4</div>
+ </body>
+</html>

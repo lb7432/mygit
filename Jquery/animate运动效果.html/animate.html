@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  #dabox{
+  	width: 1250px;
+  	height: 580px;
+  	border: 1px solid black;
+  	position: relative;
+  }
+  	#box{
+  		width: 100px;
+  		height: 200px;
+  		background: red;
+  		float: left;
+  		margin-left:70px ;
+  		position: relative;
+  	}
+  </style>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+  		$("#dabox div").mouseenter(function(){
+			c = $(this).index();
+  			$("#dabox div").eq(c).stop().animate({'height':'400px'},500).siblings('div').stop().animate({'height':'200px'},500);
+  		})
+//		$("#dabox div").mouseleave(function(){
+//			$("#dabox div").stop().animate({'height':'200px'},500);
+//		})
+  })
+  </script>
+  </head>
+ <body>
+ <div id="dabox">
+ 	<div id="box"></div>
+ 	<div id="box"></div>
+ 	<div id="box"></div>
+ 	<div id="box"></div>
+ 	<div id="box"></div>
+ 	<div id="box"></div>
+ 	<div id="box"></div>
+ </div>
+ </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var x = 0;
+  var z = 0;
+  var b = 0;
+  var n = 0;
+  var f = 0;
+  var arr = new Array();
+  //屏幕输出
+  function sum(z)
+  {
+	  document.getElementById("sc").value+= document.getElementById(z).value;
+	  //输出到屏幕的是string类型
+	  //var a = document.getElementById("sc").value;
+	  //alert(typeof(a));
+  }
+  //加减乘除运算
+  function yunSuan(m)
+  {
+	  b = document.getElementById("sc").value;
+	  b = parseFloat(b);
+	  //alert(typeof(b));
+	  f = m;
+	  //alert(f);
+	  //arr.push(b);
+	  document.getElementById("sc").value = "";
+  }
+  //输出结果
+  function result()
+  {
+	  n = document.getElementById("sc").value;
+	  n = parseFloat(n);
+	  switch (f)
+	  {
+	  case "+":
+			  document.getElementById("sc").value = b+n;
+			  break;
+	  case "-":
+			  document.getElementById("sc").value = b-n;
+			  break;
+	  case "*":
+			  document.getElementById("sc").value = b*n;
+			  break;
+	  case "/":
+			  if (n == 0)
+			  {
+				 document.getElementById("sc").value = "除数不能为0";
+			  }else{
+			  document.getElementById("sc").value = b/n;
+			  }
+			  break;
+	  }
+  }
+  //clear清除函数
+  function cLear()
+  {
+	  document.getElementById("sc").value = "";
+  }
+  </script>
+  <style type="text/css">
+  /*css部分*/
+  table{
+	border:2px solid grey;
+	width:300px;
+	margin:0 auto;
+	margin-top:100px;
+	border-collapse:collapse;
+  }
+  tr{
+	border:1px;
+	border-collapse:collapse;
+  }
+  #title{
+	background:#F0F0F0;
+  }
+  th{
+	height:60px;
+  }
+  #sc{
+	height:30px;
+	font-size:25px;
+	font-style:italic;
+	font-weight:bold;
+  }
+  td{
+	width:80px;
+	height:50px;
+	text-align:center;
+  }
+  td input{
+	width:65px;
+	height:40px;
+	background:#C0C0C0;
+  }
+  </style>
+ </head>
+ <body>
+ <table border="2px">
+ <tr id="title"><th colspan="4"><input id="sc" type="text" style="width:250px" value=""></th></tr>
+ <tr><td><input type="button" value="POWER"></td>
+ <td><input type="button" value="Clear" name="clear" onclick="cLear()"></td>
+ <td><input type="button" value="Back"></td>
+ <td>&nbsp</td></tr>
+ <tr><td><input type="button" id="1" value="1" onclick="sum(this.id)"></td>
+ <td><input type="button" id="2" value="2" onclick="sum(this.id)"></td>
+ <td><input type="button" id="3" value="3" onclick="sum(this.id)"></td>
+ <td><input type="button" id="4" value="4" onclick="sum(this.id)"></td></tr>
+ <tr><td><input type="button" id="5" value="5" onclick="sum(this.id)"></td>
+ <td><input type="button" id="6" value="6" onclick="sum(this.id)"></td>
+ <td><input type="button" id="7" value="7" onclick="sum(this.id)"></td>
+ <td><input type="button" id="8" value="8" onclick="sum(this.id)"></td></tr>
+ <tr><td><input type="button" id="9" value="9" onclick="sum(this.id)"></td>
+ <td><input type="button" id="0" value="0" onclick="sum(this.id)"></td>
+ <td><input type="button" id="." value="." onclick="sum(this.id)"></td>
+ <td><input type="button" value="=" onclick="result()"></td></tr>
+ <tr><td><input type="button"id="+" value="+" onclick="yunSuan(this.id)"></td>
+ <td><input type="button" id="-"value="-" onclick="yunSuan(this.id)"></td>
+ <td><input type="button" id="*"value="*" onclick="yunSuan(this.id)"></td>
+ <td><input type="button" id="/"value="/" onclick="yunSuan(this.id)"></td></tr>
+ </table>
+ </body>
+</html>

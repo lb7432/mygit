@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+ </head>
+ <body>
+ <canvas id="huabu" width="800px" height="600px"style="border:1px solid black">
+ <script type="text/javascript">
+  var my_canvas = document.getElementById("huabu");
+  var my_huabi = my_canvas.getContext("2d");
+  my_huabi.strokeStyle = "blue";
+  //画一个圆
+  my_huabi.beginPath();
+  //参数：（圆心x，圆心y，半径，起始弧度，结束弧度）；
+  my_huabi.arc(200,150,150,0,2*Math.PI);
+  my_huabi.stroke();
+  //画一个填充的圆
+  my_huabi.fillStyle = "red";
+  my_huabi.beginPath();
+  my_huabi.arc(500,200,150,0,2*Math.PI);
+  my_huabi.fill();
+  </script>
+ </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="jquery.min.js">
+  </script>
+  <script type="text/javascript">
+  $(function(){
+//		全选
+		$("#quanxuan").click(function(){
+			$("#list :checkbox").prop('checked',true);
+		})
+//		全不选
+		$("#quanbuxuan").click(function(){
+			$("#list :checkbox").removeProp('checked');
+		})
+//	反选
+		$("#fanxuan").click(function(){
+			$("#list :checkbox").prop('checked',function(i,val){
+				return !val;
+			})
+		})
+  })
+  </script>
+  </head>
+ <body>
+ 	<input type="button"id="quanxuan" value="全选" />
+ 	<input type="button"id="quanbuxuan" value="全不选" />
+ 	<input type="button"id="fanxuan" value="反选" />
+ 	<br />
+ 	<div id="list">
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br />
+ 	<input type="checkbox" id=""/>叽叽喳喳扎轰炸哈哈哈哈哈哈<br /> 		
+ 	</div>
+ </body>
+</html>

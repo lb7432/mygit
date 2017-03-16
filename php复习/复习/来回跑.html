@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  	#tu{
+  			position: absolute;
+  			top: 40px;
+  	}
+  </style>
+  <script type="text/javascript">
+  window.onload = function(){
+//		定时器
+	var put = document.getElementById('put');
+	var tu = document.getElementById('tu');
+	var speed = 5;
+	var dingshi = 0;
+//	给按钮加事件
+	put.onclick = function(){
+//		清理定时器
+	clearInterval(dingshi);
+//		设置定时器
+	dingshi = setInterval(function(){
+		var old_left = tu.style.left;
+		var new_left = parseFloat(old_left) + speed;
+//		复制回去
+		tu.style.left = new_left + "px";
+//		简化代码
+		if (new_left == 600 || new_left ==0) {
+			speed = speed*-1;
+			if (speed>0) {
+				tu.src = "gou.gif";
+			}
+			if (speed<0) {
+				tu.src = "gou2.gif";
+			}
+		}
+//		if (new_left ==600) {
+//			speed = -5;
+//		}
+//		if (new_left ==0) {
+//			speed =5;
+//		}
+	},25);
+	}
+  }
+  </script>
+  </head>
+ <body>
+	<input type="button"value="点我呀" id="put"/><br />
+	<img src="gou.gif" style="width: 150px;left: 0px;"id="tu"/>
+ </body>
+</html>

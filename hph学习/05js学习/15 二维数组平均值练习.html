@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title></title>
+  <script type="text/javascript">
+  var a = [[6, 90, 50],[7, 20, 30, 10]];
+  var res = 0;
+  var z = 0;
+  var a_line = a.length;
+  for (i = 0; i < a_line; i++)
+  {
+	  var a_list = a[i].length;
+	  for (j = 0; j < a_list; j++)
+	  {
+		  res += a[i][j];
+		  z++
+	  }
+  }
+	var average = res / z;
+	window.alert("平均值=" + average.toFixed(2));
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

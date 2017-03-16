@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="gb2312">
+  <title>for循环金字塔练习</title>
+  <script type="text/javascript">
+  var n = window.prompt("请输入一个数");
+	n = parseInt(n);
+	for(i = 1; i <= n; i++)
+	{
+		for(j = 1; j <= n - i; j++)
+		{
+		document.write("&nbsp");
+		}
+		for(z = 1; z <= 2 * (i-1) + 1; z++)
+		{
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+
+  </script>
+ </head>
+ <body>
+ </body>
+</html>
